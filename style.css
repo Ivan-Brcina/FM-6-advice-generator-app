@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url(fonts/Manrope-VariableFont_wght.ttf) format("truetype");
+}
+
+:root {
+  /* Colors */
+  --c-primary-lightCyan: hsl(193, 38%, 86%);
+  --c-primary-neonGreen: hsl(150, 100%, 66%);
+  --c-neutral-grayishBlue: hsl(217, 19%, 38%);
+  --c-neutral-darkGrayishBlue: hsl(217, 19%, 24%);
+  --c-neutral-darkBlue: hsl(218, 23%, 16%);
+}
+
+body {
+  font-family: "Manrope";
+  font-weight: 800;
+  height: 100vh;
+  font-size: 28px;
+  display: grid;
+  grid-template: 1fr / 1fr;
+  grid-auto-rows: 50px;
+  background-color: var(--c-neutral-darkBlue);
+}
+
+.main-container {
+  text-align: center;
+  place-self: center;
+  height: min-content;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: var(--c-neutral-darkGrayishBlue);
+  border-radius: 10px;
+  position: relative;
+}
+
+.desktop-image {
+  display: none;
+}
+
+.desktop-image,
+.mobile-image {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.random-btn {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--c-primary-neonGreen);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.random-btn:hover {
+  box-shadow: 0 0 20px 10px rgba(82, 255, 168, 50%);
+  cursor: pointer;
+}
+
+.advice-id {
+  font-size: 0.75rem;
+  color: var(--c-primary-neonGreen);
+  margin: 20px 0;
+  letter-spacing: 3px;
+}
+
+.advice {
+  color: var(--c-primary-lightCyan);
+  margin-bottom: 15px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--c-primary-lightCyan);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 900px) {
+  .mobile-image {
+    display: none;
+  }
+
+  .desktop-image {
+    display: inline-block;
+  }
+}
